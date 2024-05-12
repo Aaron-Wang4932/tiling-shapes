@@ -28,7 +28,7 @@ public class HomePanel extends GradientPanel {
                 new Color(0xebddff)));
         title.setForeground(Color.white);
 
-        buyBtn = new JButton("Buy Tiles");
+        buyBtn = new JButton("buy tiles");
         buyBtn.setActionCommand("Buy Tiles");
         buyBtn.setFocusable(false);
         buyBtn.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 32));
@@ -38,7 +38,7 @@ public class HomePanel extends GradientPanel {
         buyBtn.addMouseListener(mouseHandler);
         buyBtn.addActionListener(gui);
 
-        cartBtn = new JButton("View Cart");
+        cartBtn = new JButton("view cart");
         cartBtn.setActionCommand("View Cart");
         cartBtn.setFocusable(false);
         cartBtn.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 32));
@@ -47,7 +47,7 @@ public class HomePanel extends GradientPanel {
         cartBtn.setBorder(BorderFactory.createLineBorder(Color.black, 3, true));
         cartBtn.addMouseListener(mouseHandler);
 
-        settingsBtn = new JButton("Settings");
+        settingsBtn = new JButton("settings");
         settingsBtn.setActionCommand("Settings");
         settingsBtn.setFocusable(false);
         settingsBtn.setFont(new Font("Century Gothic", Font.BOLD | Font.ITALIC, 32));

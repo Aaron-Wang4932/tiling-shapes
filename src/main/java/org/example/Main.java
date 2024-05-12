@@ -1,11 +1,9 @@
 package org.example;
 
-import org.example.listeners.*;
 import org.example.panels.*;
-import org.example.panels.buy.BuyPanel;
+import org.example.panels.BuyPanel;
 
 import javax.swing.*;
-import javax.swing.border.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,7 +32,8 @@ public class Main extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("Buy Tiles")) swapPanels(homePanel, buyPanel);
-         else if(e.getActionCommand().equals("Home")) swapPanels(buyPanel, homePanel);
+        else if(e.getActionCommand().equals("Home")) swapPanels(buyPanel, homePanel);
+        else if(e.getActionCommand().equals("view cart from buy panel")) System.out.println("aaaaaaeeee");
 
         homePanel.resetBorder();
         buyPanel.resetBorder();
