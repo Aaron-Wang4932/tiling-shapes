@@ -13,4 +13,9 @@ public class Triangle extends Shape {
     public double getArea() {
         return Math.round(base * height * 0.5 * 100) / 100.0;
     }
+
+    @Override
+    public String getShapeName() {
+        return "triangle";
+    }
 }

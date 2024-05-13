@@ -10,4 +10,9 @@ public class Circle extends Shape {
     public double getArea() {
         return Math.round(Math.PI*Math.pow(radius, 2) * 100) / 100.0;
     }
+
+    @Override
+    public String getShapeName() {
+        return "circle";
+    }
 }

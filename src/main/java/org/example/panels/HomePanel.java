@@ -46,6 +46,7 @@ public class HomePanel extends GradientPanel {
         cartBtn.setContentAreaFilled(false);
         cartBtn.setBorder(BorderFactory.createLineBorder(Color.black, 3, true));
         cartBtn.addMouseListener(mouseHandler);
+        cartBtn.addActionListener(gui);
 
         settingsBtn = new JButton("settings");
         settingsBtn.setActionCommand("Settings");
@@ -55,6 +56,7 @@ public class HomePanel extends GradientPanel {
         settingsBtn.setContentAreaFilled(false);
         settingsBtn.setBorder(BorderFactory.createLineBorder(Color.black, 3, true));
         settingsBtn.addMouseListener(mouseHandler);
+        settingsBtn.addActionListener(gui);
 
         this.add(title);
         title.setBounds(250, 20, 400, 75);

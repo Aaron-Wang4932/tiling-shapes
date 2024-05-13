@@ -11,4 +11,9 @@ public class Rectangle extends Shape {
     public double getArea() {
         return Math.round(length * width * 100) / 100.0;
     }
+
+    @Override
+    public String getShapeName() {
+        return "rectangle";
+    }
 }

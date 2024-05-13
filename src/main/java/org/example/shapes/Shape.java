@@ -15,6 +15,7 @@ public abstract class Shape {
     }
 
     public abstract double getArea();
+    public abstract String getShapeName();
 
     public int getQuantity() {
         return quantity;
@@ -22,5 +23,9 @@ public abstract class Shape {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public double getTotalPrice() {
+        return Math.round(getArea() * quantity * unitPrice * 100) / 100.0;
     }
 }

@@ -17,7 +17,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.ArrayList;
 
 public class BuyPanel extends GradientPanel {
 
@@ -28,7 +27,6 @@ public class BuyPanel extends GradientPanel {
     String desiredShape;
     int desiredQuantity;
     Shape tempShape;
-    boolean itemsAddedToCart = false;
     MouseHandler mouseHandler = new MouseHandler();
     public BuyPanel(ActionListener gui) {
         super(new Color(0x3E84C2), new Color(0xB093E0), GradientPanel.DIAGONAL_FILL);
@@ -53,10 +51,10 @@ public class BuyPanel extends GradientPanel {
         // Back button:
         backBtn = new JButton("home");
         backBtn.setActionCommand("Home");
+        backBtn.setForeground(new Color(0x7E5EFF));
         backBtn.setPreferredSize(new Dimension(125, 40));
         backBtn.setFocusable(false);
         backBtn.setFont(new Font("Century Gothic", Font.BOLD, 26));
-        backBtn.setForeground(new Color(0xffffff));
         backBtn.setContentAreaFilled(false);
         backBtn.setBorder(BorderFactory.createLineBorder(Color.black, 3, true));
         backBtn.addMouseListener(mouseHandler);
@@ -71,7 +69,6 @@ public class BuyPanel extends GradientPanel {
             if(tabbedPane.getSelectedIndex() == 0 && tabbedPane.getTabCount() > 1) {
                 tabbedPane.remove(1);
                 if(tabbedPane.getTabCount() == 2) tabbedPane.remove(1);
-                itemsAddedToCart = false;
             }
         });
 
@@ -827,10 +824,10 @@ public class BuyPanel extends GradientPanel {
                 return;
             }
             reviewArea.setText("successfully added items(s) to cart!\n\nto buy more tiles, select the first tab.");
+
             tabbedPane.setEnabledAt(1, false);
             Shape.shapeList.add(tempShape);
             addToCart.setText("view cart");
-            System.out.println(Shape.shapeList);
         });
 
         reviewPanel.add(check);

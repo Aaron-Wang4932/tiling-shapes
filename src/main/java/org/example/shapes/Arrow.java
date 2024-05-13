@@ -18,4 +18,9 @@ public class Arrow extends Shape {
         double unroundedArea = baseLength * baseWidth + 0.5 * pointerLength * pointerWidth;
         return Math.round(unroundedArea * 100) / 100.0;
     }
+
+    @Override
+    public String getShapeName() {
+        return "arrow";
+    }
 }

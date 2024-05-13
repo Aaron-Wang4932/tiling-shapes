@@ -15,4 +15,9 @@ public class Donut extends Shape {
 
         return Math.round(unroundedArea * 100) / 100.0;
     }
+
+    @Override
+    public String getShapeName() {
+        return "donut";
+    }
 }

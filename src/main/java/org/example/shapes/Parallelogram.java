@@ -12,4 +12,9 @@ public class Parallelogram extends Shape {
     public double getArea() {
         return Math.round(length * width * 100) / 100.0;
     }
+
+    @Override
+    public String getShapeName() {
+        return "parallelogram";
+    }
 }
