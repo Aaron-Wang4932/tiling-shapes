@@ -172,7 +172,7 @@ public class CartPanel extends GradientPanel {
             JOptionPane.showMessageDialog(null,
                     "subtotal: $" + String.format("%.2f", subtotal) +
                             ", total (13% tax): $" + String.format("%.2f", Math.round(subtotal * 1.13 * 100) / 100.0),
-                    "money woo 🤑🤑",
+                    "money woo",
                     JOptionPane.INFORMATION_MESSAGE);
         });
 
