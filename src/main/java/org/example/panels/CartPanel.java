@@ -4,9 +4,7 @@ import org.example.listeners.MouseHandler;
 import org.example.shapes.Shape;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
@@ -103,6 +101,10 @@ public class CartPanel extends GradientPanel {
         remove.setBorder(BorderFactory.createLineBorder(Color.black, 3, true));
         remove.addMouseListener(new MouseHandler());
         remove.addActionListener(e -> {
+            if(tableModel.getDataVector().isEmpty()) {
+                output.setText("you can't remove non-existent items bruh");
+                return;
+            }
             int selRow = table.getSelectedRow();
             Shape selShape;
             if(selRow == -1) {
@@ -142,6 +144,10 @@ public class CartPanel extends GradientPanel {
         removeAll.setBorder(BorderFactory.createLineBorder(Color.black, 3, true));
         removeAll.addMouseListener(new MouseHandler());
         removeAll.addActionListener(e -> {
+            if(tableModel.getDataVector().isEmpty()) {
+                output.setText("you still can't remove non-existent items bruh");
+                return;
+            }
             Shape.shapeList.clear();
             updateTable();
             output.setText("cleared cart L broke");
@@ -166,7 +172,7 @@ public class CartPanel extends GradientPanel {
             JOptionPane.showMessageDialog(null,
                     "subtotal: $" + String.format("%.2f", subtotal) +
                             ", total (13% tax): $" + String.format("%.2f", Math.round(subtotal * 1.13 * 100) / 100.0),
-                    "money woo",
+                    "money woo 🤑🤑",
                     JOptionPane.INFORMATION_MESSAGE);
         });
 

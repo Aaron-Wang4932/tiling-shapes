@@ -844,6 +844,7 @@ public class BuyPanel extends GradientPanel {
 
     public void resetBorder() {
         backBtn.setBorder(BorderFactory.createLineBorder(Color.black, 3, true));
+        tabbedPane.setSelectedIndex(0);
     }
 
     private void validateDouble(KeyEvent e) {

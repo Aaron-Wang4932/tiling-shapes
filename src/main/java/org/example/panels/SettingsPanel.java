@@ -68,7 +68,7 @@ public class SettingsPanel extends GradientPanel {
         output.setEditable(false);
 
         JButton submit = new JButton("submit");
-        submit.setForeground(new Color(0x7E5EFF));
+        submit.setForeground(Color.white);
         submit.setFocusable(false);
         submit.setFont(new Font("Century Gothic", Font.BOLD, 26));
         submit.setContentAreaFilled(false);
