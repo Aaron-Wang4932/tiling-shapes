@@ -18,4 +18,15 @@ public class Triangle extends Shape {
     public String getShapeName() {
         return "triangle";
     }
+
+    public String toString() {
+        String output =
+            "Triangle × " + quantity +
+            "\n   - Base: " + base + " m" +
+            "\n   - Height: " + height + " m" +
+            "\nTotal area: " + getArea() * quantity + " m²" +
+            "\nTotal price: $" + String.format("%,.2f", getArea() * quantity * Shape.getUnitPrice());
+
+        return output;
+    }
 }

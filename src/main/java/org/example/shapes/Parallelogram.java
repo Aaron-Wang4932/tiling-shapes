@@ -17,4 +17,15 @@ public class Parallelogram extends Shape {
     public String getShapeName() {
         return "parallelogram";
     }
+
+    public String toString() {
+        String output =
+            "Parallelogram × " + quantity +
+            "\n   - Length: " + length + " m" +
+            "\n   - Width: " + width + " m" +
+            "\nTotal area: " + getArea() * quantity + " m²" +
+            "\nTotal price: $" + String.format("%,.2f", getArea() * quantity * Shape.getUnitPrice());
+
+        return output;
+    }
 }

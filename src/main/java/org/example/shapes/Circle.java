@@ -15,4 +15,14 @@ public class Circle extends Shape {
     public String getShapeName() {
         return "circle";
     }
+
+    public String toString() {
+        String output =
+            "Circle × " + quantity +
+            "\n   - Radius: " + radius + " m" +
+            "\nTotal area: " + Math.round(getArea() * quantity * 100) / 100.0 + " m²" +
+            "\nTotal price: $" + String.format("%,.2f", getArea() * quantity * Shape.getUnitPrice());
+
+        return output;
+    }
 }

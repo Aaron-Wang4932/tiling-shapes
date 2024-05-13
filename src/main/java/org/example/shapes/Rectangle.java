@@ -16,4 +16,15 @@ public class Rectangle extends Shape {
     public String getShapeName() {
         return "rectangle";
     }
+
+    public String toString() {
+        String output =
+            "Rectangle × " + quantity +
+            "\n   - Length: " + length + " m" +
+            "\n   - Width: " + width + " m" +
+            "\nTotal area: " + getArea() * quantity + " m²" +
+            "\nTotal price: $" + String.format("%,.2f", getArea() * quantity * Shape.getUnitPrice());
+
+        return output;
+    }
 }

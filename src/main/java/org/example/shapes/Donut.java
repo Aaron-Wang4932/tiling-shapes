@@ -20,4 +20,15 @@ public class Donut extends Shape {
     public String getShapeName() {
         return "donut";
     }
+
+    public String toString() {
+        String output =
+            "Donut × " + quantity +
+            "\n   - Radius 1: " + radius1 + " m" +
+            "\n   - Radius 2: " + radius2 + " m" +
+            "\nTotal area: " + Math.round(getArea() * quantity * 100) / 100.0 + " m²" +
+            "\nTotal price: $" + String.format("%,.2f", getArea() * quantity * Shape.getUnitPrice());
+
+        return output;
+    }
 }

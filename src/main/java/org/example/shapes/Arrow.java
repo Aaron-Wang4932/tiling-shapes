@@ -23,4 +23,17 @@ public class Arrow extends Shape {
     public String getShapeName() {
         return "arrow";
     }
+
+    public String toString() {
+        String output =
+            "Arrow × " + quantity +
+            "\n   - Base length: " + baseLength + " m" +
+            "\n   - Base width: " + baseWidth + " m" +
+            "\n   - Pointer length: " + pointerLength + " m" +
+            "\n   - Pointer width: " + pointerWidth + " m" +
+            "\nTotal area: " + getArea() * quantity + " m²" +
+            "\nTotal price: $" + String.format("%,.2f", getArea() * quantity * Shape.getUnitPrice());
+
+        return output;
+    }
 }

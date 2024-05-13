@@ -24,4 +24,17 @@ public class TriangleDonut extends Shape {
     public String getShapeName() {
         return "triangular donut";
     }
+
+    public String toString() {
+        String output =
+            "Parallelogram × " + quantity +
+            "\n   - Base 1: " + base1 + " m" +
+            "\n   - Height 1: " + height1 + " m" +
+            "\n   - Base 2: " + base2 + " m" +
+            "\n   - Height 2: " + height2 + " m" +
+            "\nTotal area: " + getArea() * quantity + " m²" +
+            "\nTotal price: $" + String.format("%,.2f", getArea() * quantity * Shape.getUnitPrice());
+
+        return output;
+    }
 }

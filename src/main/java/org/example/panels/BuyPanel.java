@@ -732,7 +732,7 @@ public class BuyPanel extends GradientPanel {
         ));
 
         JTextField output2_6 = new JTextField();
-        output2_6.setFont(new Font("Century Gothic", Font.BOLD, 24));
+        output2_6.setFont(new Font("Century Gothic", Font.BOLD, 14));
         output2_6.setMargin(new Insets(5, 5, 5, 5));
         output2_6.setFocusable(false);
         output2_6.setBorder(BorderFactory.createLineBorder(Color.black, 3, true));
@@ -868,10 +868,10 @@ public class BuyPanel extends GradientPanel {
         if(desiredQuantity > 1) reviewArea.append("s");
         reviewArea.append(":\n");
         reviewArea.append("   - area: " + tempShape.getArea() + " m²\n");
-        if(desiredQuantity != 1) reviewArea.append("  - total area: " + tempShape.getArea() * desiredQuantity + " m²\n");
-        reviewArea.append("   - unit price: " + String.format("%.2f", Shape.getUnitPrice()) + " $/m²\n");
-        reviewArea.append("   - price per tile: $" + String.format("%.2f", Math.round(tempShape.getArea() * Shape.getUnitPrice() * 100) / 100.0) + "\n");
-        reviewArea.append("   - total price: $" + String.format("%.2f", Math.round(tempShape.getArea() * Shape.getUnitPrice() * desiredQuantity * 100) / 100.0) + "\n");
+        if(desiredQuantity != 1) reviewArea.append("   - total area: " + (Math.round(tempShape.getArea() * desiredQuantity * 100) / 100.0) + " m²\n");
+        reviewArea.append("   - unit price: " + String.format("%,.2f", Shape.getUnitPrice()) + " $/m²\n");
+        reviewArea.append("   - price per tile: $" + String.format("%,.2f", Math.round(tempShape.getArea() * Shape.getUnitPrice() * 100) / 100.0) + "\n");
+        reviewArea.append("   - total price: $" + String.format("%,.2f", Math.round(tempShape.getArea() * Shape.getUnitPrice() * desiredQuantity * 100) / 100.0) + "\n");
 
     }
 }

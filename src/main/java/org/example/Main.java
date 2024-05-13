@@ -58,6 +58,6 @@ public class Main extends JFrame implements ActionListener {
         this.add(newPanel);
         this.repaint();
         this.pack();
-        this.setLocationRelativeTo(null);
+//        this.setLocationRelativeTo(null);
     }
 }
